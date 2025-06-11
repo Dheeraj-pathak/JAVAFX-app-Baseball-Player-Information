@@ -78,12 +78,6 @@ Populate with at least **5 favorite baseball players**.
 
 ---
 
-## 🖼 UI Snapshot
-
-> *Designed using SceneBuilder with a clean TableView, labeled fields, and operational buttons.*  
-> *(You may add screenshots to the GitHub repo under `/images` and reference here.)*
-
----
 
 ## 🔧 Setup Instructions
 
