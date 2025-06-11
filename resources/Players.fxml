@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.text.*?>
+
+<BorderPane xmlns:fx="http://javafx.com/fxml" fx:controller="Ishaan.PlayersController">
+    <top>
+        <Label text="Baseball Players Database"
+               BorderPane.alignment="CENTER"
+               style="-fx-font-size: 24px; -fx-font-weight: bold; -fx-padding: 10;"/>
+    </top>
+
+    <center>
+       <VBox spacing="10">
+    <padding>
+        <Insets top="10" right="10" bottom="10" left="10"/>
+    </padding>
+            <!-- Table -->
+            <TableView fx:id="tableView" prefHeight="200">
+                <columns>
+                    <TableColumn fx:id="colID" text="Player ID" prefWidth="100"/>
+                    <TableColumn fx:id="colFirst" text="First Name" prefWidth="150"/>
+                    <TableColumn fx:id="colLast" text="Last Name" prefWidth="150"/>
+                    <TableColumn fx:id="colAvg" text="Batting Average" prefWidth="150"/>
+                </columns>
+            </TableView>
+
+            <!-- Input Section -->
+            <HBox spacing="10">
+                <Label text="Player ID:"/>
+                <TextField fx:id="tfPlayerID" promptText="Enter Player ID"/>
+
+                <Label text="First Name:"/>
+                <TextField fx:id="tfFirstName" promptText="Enter First Name"/>
+            </HBox>
+
+            <!-- Buttons Section -->
+            <HBox spacing="10">
+                <Button text="Display All" onAction="#displayAll"/>
+                <Button text="Search" onAction="#search"/>
+                <Button text="Minimum Batting Score" onAction="#showMin"/>
+                <Button text="Maximum Batting Score" onAction="#showMax"/>
+                <Button text="Clear Table" onAction="#clear"/>
+            </HBox>
+
+            <!-- Min/Max Output Section -->
+            <HBox spacing="10">
+                <Label text="Min Score:"/>
+                <TextField fx:id="tfMin" editable="false"/>
+
+                <Label text="Max Score:"/>
+                <TextField fx:id="tfMax" editable="false"/>
+            </HBox>
+        </VBox>
+    </center>
+</BorderPane>
